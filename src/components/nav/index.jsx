@@ -86,14 +86,11 @@ const Nav = () => {
                     >
                         <IconButton
                             color='inherit'
-                            sx={{
-                                p: 0
-                            }}
                         >
                             <Avatar
                                 sx={{
-                                    width: 39,
-                                    height: 39,
+                                    width: 24,
+                                    height: 24,
                                     color: 'inherit'
                                 }}
                             />
@@ -108,8 +105,8 @@ const Nav = () => {
                         centered
                     >
                         <Tab label='Hoje' sx={{ color: '#FFF!important' }} />
-                        <Tab label='amanha' sx={{ color: '#FFF!important' }} />
-                        <Tab label='10 dias' sx={{ color: '#FFF!important' }} />
+                        <Tab label='Amanhã' sx={{ color: '#FFF!important' }} />
+                        <Tab label='10 Dias' sx={{ color: '#FFF!important' }} />
                     </Tabs>
             </AppBar>
 
