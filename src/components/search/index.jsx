@@ -25,29 +25,24 @@ const Search = () => {
                 open={openSearch}
                 onClose={handleCloseSearch}
                 TransitionComponent={Transition}
+                sx={{
+                    boxShadow: 'none'
+                }}
             >
                 <AppBar 
-                    position='relative' 
-                    elevation={0}
-                    sx={{
-                        boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 5%), 0px 1px 1px 0px rgb(0 0 0 / 4%), 0px 1px 3px 0px rgb(0 0 0 / 3%)'
-                    }}    
+                    position='fixed' 
+                    elevation={0}    
                 >
                     <Toolbar
                         sx={{
-                            display: 'flex',
-                            minHeight: 'auto!important',
-                            py: 1
+                            minHeight: '64px!important',
                         }}
                     >
                         <IconButton
                             onClick={handleCloseSearch}
+                            color='inherit'
                         >
-                            <ArrowBackIcon 
-                                sx={{
-                                    color: 'rgba(0, 0, 0, .75)'
-                                }}
-                            />
+                            <ArrowBackIcon />
                         </IconButton>
 
                         <TextField
@@ -56,16 +51,22 @@ const Search = () => {
                             size='small'
                             placeholder='Pesquisar lugares'
                             sx={{
-                                ml: 2
+                                ml: 1.85
                             }}
                         />
                     </Toolbar>
                 </AppBar>
 
-                <Box sx={{ px: 3, py: 2 }}>
-                    <Typography color='text.secondary'>
-                        Em desenvolvimento...
-                    </Typography>
+                <Box
+                    sx={{
+                        pt: '64px'
+                    }}
+                >
+                    <Box sx={{ px: 3, py: 2 }}>
+                        <Typography color='text.secondary'>
+                            Em desenvolvimento por Cesar Oliveira
+                        </Typography>
+                    </Box>
                 </Box>
             </Dialog>
         </>

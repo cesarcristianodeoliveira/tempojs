@@ -1,30 +1,18 @@
-import React from 'react'
-
-import { useSlideContext } from '../../contexts/SlideContext'
-
-import { useTheme } from '@mui/material'
+import { useApiContext } from '../../contexts/ApiContext'
 
 import { Today, Tomorrow, ThenDays } from '../../components'
 
 const Home = () => {
 
-    const { TabPanel, slideValue, a11yProps } = useSlideContext()
+    const { loading } = useApiContext()
 
-    const theme = useTheme()
-
-    return (
+    return (!loading && (
         <>
-            <TabPanel value={slideValue} index={0} {...a11yProps(0)}  dir={theme.direction}>
-                <Today />
-            </TabPanel>
-            <TabPanel value={slideValue} index={1} {...a11yProps(1)}  dir={theme.direction}>
-                <Tomorrow />
-            </TabPanel>
-            <TabPanel value={slideValue} index={2} {...a11yProps(2)}  dir={theme.direction}>
-                <ThenDays />
-            </TabPanel>
+            <Today />
+            <Tomorrow />                  
+            <ThenDays />
         </>
-    )
+    ))
 }
 
 export default Home

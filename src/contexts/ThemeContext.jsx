@@ -5,7 +5,7 @@ import { blue } from '@mui/material/colors';
 
 const Context = createContext();
 
-export const ThemeContext = ({ children }) => {  
+export const ThemeContext = ({ children }) => { 
 
     const [mode, setMode] = useState(localStorage.getItem("mode") ? localStorage.getItem("mode") : 'light') 
     const toggleMode = () => {
@@ -19,12 +19,24 @@ export const ThemeContext = ({ children }) => {
           main: blue[600],
         }
       },
-      
+      transitions: {
+        easing: {
+          // This is the most common easing curve.
+          easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
+          // Objects enter the screen at full velocity from off-screen and
+          // slowly decelerate to a resting point.
+          easeOut: 'cubic-bezier(0.0, 0, 0.2, 1)',
+          // Objects leave the screen at full velocity. They do not decelerate when off-screen.
+          easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
+          // The sharp curve is used by objects that may return to the screen at any time.
+          sharp: 'cubic-bezier(0.4, 0, 0.6, 1)',
+        },
+      },
     })
     useEffect(() => {
       const mode = localStorage.getItem("mode");
       if(mode !== null){
-        setMode(mode === 'true');
+          setMode(mode === 'true')
       }
     }, []);
 
@@ -32,6 +44,7 @@ export const ThemeContext = ({ children }) => {
       <Context.Provider
         value={{
           theme,
+          mode,
           toggleMode
         }}
       >

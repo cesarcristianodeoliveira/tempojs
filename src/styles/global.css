@@ -1,12 +1,19 @@
 html, body, #root {
-    height: 100%;
-    overflow-x: hidden;
+  height: 100%;
 }
 
-body {
-    overflow-x: hidden;
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
-.grid-days + .grid-days:last-child {
-    border-bottom: 1px solid transparent;
+.grid-days .day {
+    border-bottom: 1px solid #eee;
+}
+
+.grid-days .day + .day:last-child {
+    border-bottom: 1px solid transparent!important;
 }

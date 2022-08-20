@@ -31,6 +31,7 @@ export const SlideContext = ({ children }) => {
         id={`full-width-tabpanel-${index}`}
         aria-labelledby={`full-width-tab-${index}`}
         {...other}
+        style={{ height: '100%' }}
       >
         {value === index && (
           <>

@@ -12,24 +12,22 @@ import { SlideContext } from '../contexts/SlideContext'
 
 const Rotas = () => {
     return (
-        <>
-            <ApiContext>
-                <UserContext>
-                    <ThemeContext>
-                        <SearchContext>
-                            <SlideContext>
-                                <BrowserRouter>
-                                    <Nav />
-                                    <Routes>
-                                        <Route path='/' element={<Home />} />
-                                    </Routes>
-                                </BrowserRouter>
-                            </SlideContext>
-                        </SearchContext>
-                    </ThemeContext>
-                </UserContext>
-            </ApiContext>
-        </>
+        <ApiContext>
+            <UserContext>
+                <ThemeContext>
+                    <SearchContext>
+                        <SlideContext>
+                            <BrowserRouter>
+                                <Nav />
+                                <Routes>
+                                    <Route path='/' element={<Home />} />
+                                </Routes>
+                            </BrowserRouter>
+                        </SlideContext>
+                    </SearchContext>
+                </ThemeContext>
+            </UserContext>
+        </ApiContext>
     )
 }
 
