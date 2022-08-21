@@ -17,7 +17,7 @@ const ThenDays = () => {
     const { thenDays } = useApiContext()
     const days = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    const { theme } = useThemeContext()
+    const { theme, mode } = useThemeContext()
     const { TabPanel, slideValue, a11yProps } = useSlideContext()
 
     return (
@@ -39,8 +39,8 @@ const ThenDays = () => {
                                     px: 3,
                                     py: 2,
                                     alignItems: 'center',
+                                    borderBottom: mode ? '1px solid rgba(0, 0, 0, .15)' : '1px solid rgba(255, 255, 255, .15)'
                                 }}
-                                className='day'
                             >
                                 <Grid
                                     item

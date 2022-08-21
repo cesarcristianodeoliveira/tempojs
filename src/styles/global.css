@@ -10,10 +10,6 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-.grid-days .day {
-    border-bottom: 1px solid #eee;
-}
-
 .grid-days .day + .day:last-child {
     border-bottom: 1px solid transparent!important;
 }

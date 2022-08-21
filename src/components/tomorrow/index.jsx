@@ -9,6 +9,7 @@ import StraightIcon from '@mui/icons-material/Straight'
 
 // day conditions images
 import clear_day from '../../assets/weather/day/clear_day.png'
+import rain from '../../assets/weather/day/rain.png'
 
 const Tomorrow = () => {
 
@@ -114,7 +115,7 @@ const Tomorrow = () => {
                                 </Box>
                             </Box>
 
-                            <Typography fontWeight={600} sx={{ mt: .75 }}>
+                            <Typography fontWeight={600} sx={{ mt: 2 }}>
                                 {tomorrow.description}
                             </Typography>
                             
@@ -144,6 +145,9 @@ const Tomorrow = () => {
                                 >
                                     {tomorrow.condition === 'clear_day' && (
                                         <img src={clear_day} alt='Tempo limpo' width='auto' height={86} />
+                                    )}
+                                    {tomorrow.condition === 'rain' && (
+                                        <img src={rain} alt='Chuva' width='auto' height={86} />
                                     )}
                                 </Box>
                             </Box>
